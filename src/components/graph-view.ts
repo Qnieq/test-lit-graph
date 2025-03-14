@@ -217,7 +217,7 @@ export class GraphView extends LitElement {
                     .on('drag', (event, d) => this.dragged(event, d))
                     .on('end', (event, d) => this.dragended(event, d))
             )
-            .on('click', (event, d) => this.onNodeClick(d));
+            .on('click', (_, d) => this.onNodeClick(d));
 
         // UPDATE + ENTER
         nodeSelection.merge(nodeEnter).attr('fill', (d) => this.getNodeColor(d));
