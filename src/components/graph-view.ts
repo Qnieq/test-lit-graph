@@ -91,7 +91,6 @@ export class GraphView extends LitElement {
                 return;
             }
             const data: GraphData = await resp.json();
-            // Обновляем граф, если адрес найден под ключом "to" в links
             const linkContainsAddressTo = data.links.some(link => link.from === address);
             if (linkContainsAddressTo) {
                 this.updateGraph(data);
