@@ -84,7 +84,7 @@ export class GraphView extends LitElement {
 
     private async fetchGraphData(fileIndex: number, address: string) {
         try {
-            const url = `src/data/${fileIndex}.json?address=${address}`;
+            const url = `/data/${fileIndex}.json?address=${address}`;
             const resp = await fetch(url);
             if (!resp.ok) {
                 console.error(`Ошибка загрузки графа из ${url}`);
